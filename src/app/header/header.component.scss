@@ -1,0 +1,158 @@
+@import '../../assets/scss/mixins';
+
+
+header {
+    font-family: "Poppins-Regular";
+}
+
+
+.navbar {
+    justify-content: space-between;
+
+    .navbar-brand {
+        .header-icon {
+            width: 57.18px;
+            height: 85px;
+            object-fit: contain;
+            outline: 0;
+        }
+    }
+
+    .trip-details {
+        // display: flex;
+        // align-items: center;
+        @include flexGap(10px);
+        // gap: 10px;
+
+        h6 {
+            font-size: 18px;
+            line-height: 27px;
+            font-weight: 400;
+            color: #000000;
+            margin-bottom: 0px;
+        }
+
+        .bi-handbag-fill {
+            color: #d6b900;
+        }
+
+        label {
+            font-size: 12px;
+            color: #707070;
+            font-weight: 400;
+            line-height: 18px;
+            font-weight: 400;
+        }
+
+    }
+
+    .nav-link-login {
+        background-color: #d6b900;
+        border-radius: 30px;
+        padding: 18px 36px;
+    }
+
+    .navbar-nav {
+        @include flexGap(10px);
+
+        // align-items: center;
+        // gap: 10px;
+
+        button {
+            border: none;
+            background: none;
+            font-size: 18px;
+            line-height: 27px;
+            color: #000000;
+            font-weight: 500;
+        }
+
+        .form-select-menu {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            background-color: #F5F5F5;
+            border-radius: 30px;
+            padding: 18px 30px;
+            position: relative;
+
+            .menu-select-options {
+                visibility: hidden;
+                position: absolute;
+                top: 62px;
+                left: -100px;
+                z-index: 10;
+            }
+
+        }
+
+        .form-select-menu:focus {
+            box-shadow: rgb(9, 191, 252);
+            border: 1px solid rgb(9, 191, 252);
+
+            .menu-select-options {
+                // display: block;
+                visibility: visible;
+            }
+
+        }
+    }
+}
+
+.country-details {
+    position: absolute;
+    right: 11.5%;
+    top: 14%;
+    width: 412px;
+    min-height: 360px;
+    z-index: 20;
+
+    span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(112, 112, 112, 1);
+
+    }
+
+    label {
+        font-size: 16px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 1);
+        line-height: 24px;
+
+    }
+
+    input[type="radio"]:focus {
+        outline: 1.33px solid #d6b900;
+        border: 1.33px solid #fff;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+
+    input[type="radio"] {
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        border: 1.33px solid #000000;
+        border-radius: 50%;
+        background-color: transparent;
+        
+    }
+
+    input[type="radio"]:checked {
+        outline: 1.33px solid #d6b900;
+        border: 1.33px solid #fff;
+        background-color: #fff;
+        background-color: rgba(214, 185, 0, 1);
+    }
+
+    .header-city-btn {
+        width: 84%;
+        border: none;
+        background: rgba(94, 24, 12, 1);
+        border-radius: 30px;
+        color: rgba(255, 255, 255, 1);
+        padding: 13px 0px;
+    }
+}

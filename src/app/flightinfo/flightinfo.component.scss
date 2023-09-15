@@ -1,0 +1,23 @@
+.flight-info-wrapper {
+    border: none;
+    margin-top: -13%;
+    padding: 0px;
+    border-radius: 15px 15px 15px 15px;
+    overflow: hidden;
+    background: none;
+    .p-tabview-panels {
+        border-radius: 0px 15px 15px 15px;
+        overflow: hidden;
+        box-shadow: 0px 24px 50px 0px rgba(0, 0, 0, 0.1);
+    
+    }
+.p-tabview .p-tabview-nav {
+        background: none;
+        border: none;
+        border-width: 0 0 2px 0;
+    }
+    .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+}

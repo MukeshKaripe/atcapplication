@@ -1,0 +1,37 @@
+.gradientbg {
+   
+  }
+  
+  .interchange {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .date {
+    font-weight: 900;
+    font-size: 30px;
+  }
+  
+  .month {
+    font-size: 20px;
+  }
+  
+  .hovers:hover {
+    background-color: #f0f1e9;
+    cursor: pointer;
+  }
+  
+  .adult {
+    border: 1px solid white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .selected{
+    color: black;
+    background-color: orange;
+  }
+  .nn{
+    display: flex;
+    flex-direction: column;
+  }
+  

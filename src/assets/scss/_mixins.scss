@@ -1,0 +1,46 @@
+// Mixin Files
+@mixin position($top, $right, $bottom, $left) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin translate($x, $y) {
+    @include transform(translate($x, $y));
+}
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexDirection($direction){
+    display: flex;
+    align-items: center;
+    flex-direction: $direction;
+
+}
+@mixin flexGap($gap){
+    display: flex;
+    align-items: center;
+    gap: $gap;
+
+}
