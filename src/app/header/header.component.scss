@@ -98,61 +98,64 @@ header {
         }
     }
 }
-
-.country-details {
-    position: absolute;
-    right: 11.5%;
-    top: 14%;
-    width: 412px;
-    min-height: 360px;
-    z-index: 20;
-
-    span {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: rgba(112, 112, 112, 1);
-
-    }
-
-    label {
-        font-size: 16px;
-        font-weight: 500;
-        color: rgba(0, 0, 0, 1);
-        line-height: 24px;
-
-    }
-
-    input[type="radio"]:focus {
-        outline: 1.33px solid #d6b900;
-        border: 1.33px solid #fff;
-        background-color: #fff;
-        border-radius: 50%;
-    }
-
-    input[type="radio"] {
-        appearance: none;
-        width: 15px;
-        height: 15px;
-        border: 1.33px solid #000000;
-        border-radius: 50%;
-        background-color: transparent;
-        
-    }
-
-    input[type="radio"]:checked {
-        outline: 1.33px solid #d6b900;
-        border: 1.33px solid #fff;
-        background-color: #fff;
-        background-color: rgba(214, 185, 0, 1);
-    }
-
-    .header-city-btn {
-        width: 84%;
-        border: none;
-        background: rgba(94, 24, 12, 1);
-        border-radius: 30px;
-        color: rgba(255, 255, 255, 1);
-        padding: 13px 0px;
+.lang-component{
+    position: relative;
+    .country-details {
+        position: absolute;
+        right: 30px;
+        top: 65px;
+        width: 412px;
+        min-height: 360px;
+        z-index: 20;
+    
+        span {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(112, 112, 112, 1);
+    
+        }
+    
+        label {
+            font-size: 16px;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 1);
+            line-height: 24px;
+    
+        }
+    
+        input[type="radio"]:focus {
+            outline: 1.33px solid #d6b900;
+            border: 1.33px solid #fff;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+    
+        input[type="radio"] {
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            border: 1.33px solid #000000;
+            border-radius: 50%;
+            background-color: transparent;
+            
+        }
+    
+        input[type="radio"]:checked {
+            outline: 1.33px solid #d6b900;
+            border: 1.33px solid #fff;
+            background-color: #fff;
+            background-color: rgba(214, 185, 0, 1);
+        }
+    
+        .header-city-btn {
+            width: 84%;
+            border: none;
+            background: rgba(94, 24, 12, 1);
+            border-radius: 30px;
+            color: rgba(255, 255, 255, 1);
+            padding: 13px 0px;
+        }
+       
     }
 }

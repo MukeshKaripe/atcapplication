@@ -32,10 +32,79 @@
                                 <button>LOGIN</button> / <button>SIGNUP</button>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item lang-component">
                             <a class="nav-link form-select-menu" href="#" (click)="showCountryListDiv()"  >
                                 IN|ENG|INR <i class="bi bi-chevron-down"></i>
                             </a>  
+                            <div *ngIf="showCountrylist" class="country-details" #countryListRef>
+                                <div class="card shadow-3 card-area d-flex flex-column align-items-center">
+                                  <div class="w-100 pt-3 border-0 drop-area px-3 flex justify-content-end">
+                                        <!-- <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [showClear]="true" placeholder="Select a Country">
+                                            <ng-template pTemplate="selectedItem">
+                                                <div class="flex align-items-center gap-2" *ngIf="selectedCountry">
+                                                    <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + selectedCountry.code.toLowerCase()" style="width: 18px"/>
+                                                    <div>{{ selectedCountry.name }}</div>
+                                                </div>
+                                            </ng-template>
+                                            <ng-template let-country pTemplate="item">
+                                                <div class="flex align-items-center gap-2">
+                                                    <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + country.code.toLowerCase()" style="width: 18px"/>
+                                                    <div>{{ country.name }}</div>
+                                                </div>
+                                            </ng-template>
+                                        </p-dropdown> -->
+                                        <p-dropdown class="header-city-dpdn" [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-dropdown>
+                                  </div>
+                                  <div class="d-flex w-100 justify-content-around px-3 mt-2" >
+                                    <div class="">
+                                      <span class="select-language mb-2">Select Language</span>
+                                      <form  class="mt-2">
+                                        <div >
+                                            <div>
+                                                <input type="radio" id="english" name="selectedLanguage"  />
+                                            
+                                                <label for="english" class="ms-2">English </label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="hindi" name="selectedLanguage"  />
+                                            
+                                                <label for="hindi" class="ms-2">Hindi</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="tamil" name="selectedLanguage"  />
+                                            
+                                                <label for="tamil" class="ms-2">Tamil</label>
+                                            </div>
+                                     
+                                        </div>
+                                      
+                                      </form>
+                                    </div>
+                                    <div class=" ">
+                                        <div>
+                                            <span class="select-language mb-2">Select Currency</span>
+                                            <div>
+                                                <input type="radio" id="rupees" name="selectedLanguage"  />
+                                            
+                                                <label for="rupees" class="ms-2">INR</label>
+                                            </div>
+                                        </div>
+                                      
+                                    
+                                      <!-- <div *ngFor="let currency of currencies">
+                                        <form class="">
+                                          <input type="radio" id="inr" name="selectedCurrency" value={{currency}} formControlName="selectedCurrency">
+                                          <label for="inr" class="ms-2">{{currency}} </label>
+                                        </form>
+                                      </div> -->
+                                    </div>
+                                  
+                                  </div>
+                                  <div class="p-3 overflow-hidden text-center w-100 my-2">
+                                    <button type="button" class="header-city-btn btn-apply-now btn-primary" (click)="onApply()">Apply</button>
+                                  </div>
+                                </div>
+                              </div>
                         </li>
                     </ul>
 
@@ -44,80 +113,5 @@
         </nav>
     </div>
 
- <div *ngIf="showCountrylist" class="country-details" #countryListRef>
-        <div class="card shadow-3 card-area d-flex flex-column align-items-center">
-          <div class="w-100 pt-3 border-0 drop-area px-3 flex justify-content-end">
-                <!-- <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [showClear]="true" placeholder="Select a Country">
-                    <ng-template pTemplate="selectedItem">
-                        <div class="flex align-items-center gap-2" *ngIf="selectedCountry">
-                            <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + selectedCountry.code.toLowerCase()" style="width: 18px"/>
-                            <div>{{ selectedCountry.name }}</div>
-                        </div>
-                    </ng-template>
-                    <ng-template let-country pTemplate="item">
-                        <div class="flex align-items-center gap-2">
-                            <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + country.code.toLowerCase()" style="width: 18px"/>
-                            <div>{{ country.name }}</div>
-                        </div>
-                    </ng-template>
-                </p-dropdown> -->
-                <p-dropdown class="header-city-dpdn" [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-dropdown>
-          </div>
-          <div class="d-flex w-100 justify-content-around px-3 mt-2" >
-            <div class="">
-              <span class="select-language mb-2">Select Language</span>
-              <form  class="mt-2">
-                <div >
-                    <div>
-                        <input type="radio" id="english" name="selectedLanguage"  />
-                    
-                        <label for="english" class="ms-2">English </label>
-                    </div>
-                    <div>
-                        <input type="radio" id="hindi" name="selectedLanguage"  />
-                    
-                        <label for="hindi" class="ms-2">Hindi</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="tamil" name="selectedLanguage"  />
-                    
-                        <label for="tamil" class="ms-2">Tamil</label>
-                    </div>
-             
-                </div>
-              
-              </form>
-            </div>
-            <div class=" ">
-                <div>
-                    <span class="select-language mb-2">Select Currency</span>
-                    <div>
-                        <input type="radio" id="rupees" name="selectedLanguage"  />
-                    
-                        <label for="rupees" class="ms-2">INR</label>
-                    </div>
-                </div>
-              
-            
-              <div *ngFor="let currency of currencies">
-                <form class="">
-                  <input type="radio" id="inr" name="selectedCurrency" value={{currency}} formControlName="selectedCurrency">
-                  <label for="inr" class="ms-2">{{currency}} </label>
-                </form>
-              </div>
-            </div>
-            <!-- <div class="">
-                <span class="select-language ms-3">Select Currency</span>
-                <form action="/action_page.php">
-        
-                    <input type="radio" id="html" name="fav_language" value="HTML">
-                    <label for="html">INR</label><br>
-                </form>
-              </div> -->
-          </div>
-          <div class="p-3 overflow-hidden text-center w-100 my-2">
-            <button type="button" class="header-city-btn btn-apply-now btn-primary" (click)="onApply()">Apply</button>
-          </div>
-        </div>
-      </div>
+ 
 </header>
