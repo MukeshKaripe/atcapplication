@@ -15,6 +15,8 @@
     padding: 0px;
     list-style: none;
     box-sizing: border-box;
+    font-family: "Poppins-Regular";
+
 
 }
 
@@ -32,9 +34,10 @@
     background: rgba(94, 24, 12, 1);
     border-color: rgba(94, 24, 12, 1);
     color: #fff;
+    font-size: 18px;
 }
 .flight-info-wrapper .p-tabview .p-tabview-nav {
-    width: 282px;
+    width: 312px;
     background: none;
     border: none;
     border-top-right-radius: 15px;
@@ -52,4 +55,35 @@
     }
 .flight-info-wrapper  .ltc-title{
 
+}
+.p-radiobutton {
+    width: 16px;
+    height: 17px;
+}
+.p-radiobutton .p-radiobutton-box {
+    // border: 2px solid white;
+    // background: #ffffff;
+    width: 16px;
+    height: 17px;
+    background: #fff
+
+}
+.p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+    border-color: #5E180C;
+    background: white;
+}
+.p-radiobutton .p-radiobutton-box .p-radiobutton-icon {
+    width: 10px;
+    height: 10.63px;
+    background: #22252A;
+
+}
+.p-radiobutton .p-radiobutton-box.p-highlight {
+    background: white;
+
+}
+.p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
+    background: white;
+    color: #ffffff;
+    border-color: #22252A;
 }

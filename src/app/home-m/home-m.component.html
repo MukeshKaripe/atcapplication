@@ -4,16 +4,24 @@
         <div class="card border-0">
           <div class="pt-3 pb-2">
             <div class="d-flex gap-3">
+             <div class="d-flex align-items-center gap-1" >
               <p-radioButton name="oneway" [(ngModel)]="way" value="oneway" (click)="returnDate = null ;way='oneway'">One
                 Way</p-radioButton>
                 <label for="oneway">One Way</label>
+             </div>
+             <div class="d-flex align-items-center gap-1" >
+
               <p-radioButton name="roundtrip" [(ngModel)]="way" value="roundtrip" (click)="way = 'roundtrip'; roundtrip($event) ">Round
                 Trip</p-radioButton>
                 <label for="roundtrip">Round Trip</label>
+             </div>
   
+             <div class="d-flex align-items-center gap-1" >
+
               <p-radioButton name="multy way" [(ngModel)]="way" value="multiway" (click)="multiWayForm()">Multi
                 Way</p-radioButton>
-                <label for="multyway">Multy Way</label>
+                <label for="multyway">Multi Way</label>
+             </div>
   
             </div>
           </div>
