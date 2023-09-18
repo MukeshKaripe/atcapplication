@@ -1,7 +1,7 @@
 <div class="row gradientbg">
     <div>
-      <div class="col-lg-11">
-        <div class="card border-0">
+      <div class="col-lg-12">
+        <div class="card position-relative border-0">
           <div class="pt-3 pb-2">
             <div class="d-flex gap-3">
              <div class="d-flex align-items-center gap-1" >
@@ -30,44 +30,54 @@
   
   
             <ng-container *ngIf="way.toLowerCase() === 'oneway' || way.toLowerCase() === 'roundtrip'">
-              <div class="d-flex">
-                <div class="card shadow-2 m-0">
-                  <b class="py-2 ps-3"> From :</b>
+              <div class="d-flex justify-content-between ">
+                <div class="card border-0 shadow-2 m-0 pad-rgt position-relative   ">
+                  <span class="atc-btns-content"> From</span>
   
+                 <div>
+                  <i class="bi bi-geo-alt"></i>
                   <p-dropdown formControlName="fromCity" [options]="CountryList" optionLabel="name"  placeholder="select City"></p-dropdown>
+                 </div>
+                 <div class="interchange ">
+                  <i class="bi bi-arrow-left-right"></i>
+                </div>
                 </div>
   
-                <div class="interchange">
-                  <img src="../../../assets/interchange_icon.png" (click)="interchangeCities()" alt=""
-                    style="height: 30px; width: 30px;">
-                </div>
-                <div class="card shadow-2">
-                  <b class="py-2 ps-3"> To :</b>
+                
+                <div class="card border-0 shadow-2 pad-rgt ">
+                  <span class="atc-btns-content"> To</span>
+                  <div>
+                  <i class="bi bi-geo-alt"></i>
+
                   <p-dropdown formControlName="toCity" [options]="CountryList" optionLabel="name"  placeholder="select City"></p-dropdown>
+
+                  </div>
                 </div>
   
-                <div class="card shadow-2 hovers">
-                  <b class="py-2 ps-3"> Depart Date: </b>
-                  <div class="d-flex justify-content-center align-items-center">
-                    <div class="m-3" id="myCalender">
+                <div class="card border-0 shadow-2  pad-rgt ">
+                  <span class="atc-btns-content"> Departure </span>
+                  <div class="d-flex justify-content-end flex-row-reverse ">
+                    <div class="" id="myCalender">
                       <span class="date"> {{currentDate | date : 'dd'}} </span>
                       <span class="month"> {{currentDate | date : 'MMM'}} </span>
                       <span class="month"> ' {{currentDate | date : 'yy'}} </span>
-                      <p class=""> {{currentDate | date : 'EEEE'}} </p>
   
                     </div>
-                    <div class="ms-2">
+
+                    <div class="cal-contet ">
                       <p-calendar [showIcon]="true" formControlName="initialDate" [minDate]="currentDate"
                         (ngModelChange)="onDateChanged($event)" [inputStyle]="{'display': 'none'}"></p-calendar>
                     </div>
                   </div>
+                  <p class="atc-btn-content"> {{currentDate | date : 'EEEE'}} </p>
+
                 </div>
-                <div class="card shadow-2 hovers">
-                  <b class="py-2 ps-3"> Return Date:</b>
-                  <div class="d-flex justify-content-center align-items-center">
-                    <div class="m-3">
+                <div class="card border-0 shadow-2 pad-rgt hovers ">
+                  <span class="atc-btns-content"> Return</span>
+                  <div class="d-flex justify-content-end flex-row-reverse ">
+                    <div class="">
                       <ng-container *ngIf="!returnDate">
-                        <b style="opacity: 0.7;">Add return Date </b>
+                        <span style="opacity: 0.7;">Tap to add a return date </span>
                       </ng-container>
                       <ng-container *ngIf="returnDate">
                         <span class="date"> {{returnDate | date : 'dd'}} </span>
@@ -81,20 +91,19 @@
                         </div>
                       </ng-container>
                     </div>
-                    <div class="ms-2">
-                      <p-calendar [showIcon]="true" formControlName="returnDate" [minDate]="currentDate" appendTo="body"
+                    <div class="cal-contet ">
+                      <p-calendar formControlName="returnDate" [minDate]="currentDate" appendTo="body"
                         (ngModelChange)="onReturnDateChanged($event)" [inputStyle]="{'display': 'none'}"></p-calendar>
                     </div>
                   </div>
                 </div>
-                <div class="card shadow-2 hovers" (click)="travellersCheck=true">
-                  <b class="px-3 pb-2"> Travellers & Class:</b>
+                <div class="card border-0 shadow-2 pad-left hovers" (click)="travellersCheck=true">
+                  <b class="atc-btns-content "> Travellers/Class:</b>
                   <div class="d-flex justify-content-center align-items-center">
-                    <div class="mt-2">
-                      <span class="date"> {{totalTravellers2}} </span> <span class="month"> Travellers </span>
-                      <p> ( <span *ngIf="adultCounts2">{{adultCounts2}}A </span> <span *ngIf="childrenCounts2">
-                          {{childrenCounts2}}C </span> <span *ngIf="infantCounts2"> {{infantCounts2}}I </span> ) </p>
-                      <p style="border-bottom: 2px ridge orange;"> {{travellClass2}} </p>
+                    <div class="">
+                      <span class="date"> {{totalTravellers2}} </span> <span class="month"> Traveller </span>
+          
+                      <p class="atc-btn-content"> Economy/Premium Economy </p>
                     </div>
                   </div>
                 </div>
@@ -107,12 +116,13 @@
                   <ng-container [formGroupName]="i">
                     <div class="d-flex mt-3">
                       <div class="card shadow-2 m-0">
-                        <b class="py-2 ps-3"> From :</b>
-                        <p-dropdown formControlName="fromCityMulty" [options]="CountryList" optionLabel="name"  placeholder="select City"></p-dropdown>
+                        <span class="py-2 ps-3"> From :</span>
+                       <div><i class="bi bi-geo-alt"></i><p-dropdown formControlName="fromCityMulty" [options]="CountryList" optionLaspanel="name"  placeholder="select City"></p-dropdown>
+                      </div> 
                       </div>
   
                       <div class="card shadow-2">
-                        <b class="py-2 ps-3"> To :</b>
+                        <span class="py-2 ps-3"> To :</span>
                         <p-dropdown formControlName="toCityMulty" [options]="CountryList" optionLabel="name"  placeholder="select City"></p-dropdown>
                       </div>
   
@@ -134,8 +144,8 @@
                       </div>
   
                       <ng-container *ngIf="i==0">
-                        <div class="card shadow-2 hovers" (click)="travellersCheck=true">
-                          <b class="px-3 pb-2"> Travellers & Class:</b>
+                        <div class="card border-0 shadow-2 hovers" (click)="travellersCheck=true">
+                          <b class=""> Travellers & Class:</b>
                           <div class="d-flex justify-content-center align-items-center">
                             <div class="mt-2">
                               <span class="date"> {{totalTravellers2}} </span> <span class="month"> Travellers </span>
@@ -157,7 +167,7 @@
                           </div>
                         </ng-container>
                       </div>
-                      <div class="card shadow-2 m-0 d-flex align-items-center justify-content-center">
+                      <div class="card  shadow-2 m-0 d-flex align-items-center justify-content-center">
                         <ng-container *ngIf="i != 0">
                           <div class=" cursor-pointer " (click)="deleteMultyWay(i)">
                             <span class="material-icons text-danger p-4"
@@ -174,8 +184,8 @@
               </div>
             </ng-container>
   
-            <div class="position-absolute start-50 top-100 translate-middle">
-              <button class="btn btn-warning" type="submit">Search Flights</button>
+            <div class="position-absolute start-50 top-100 translate-middle" style="width: 49%;" >
+              <button class="header-city-btn" type="submit">Search</button>
             </div>
   
           </form>
@@ -187,13 +197,13 @@
     </div>
   
     <div>
-      <button class="btn btn-warning" routerLink="parent">To Parent</button>
+      <!-- <button class="btn btn-warning" routerLink="parent">To Parent</button> -->
     </div>
   
     <p-dialog [(visible)]="travellersCheck" header="Select Travellers" [style]="{'width':'50vw'}">
       <div class="card align-items-center gap-3 shadow-3">
         <div>
-          <b style="opacity: 0.8;"> Adults(10+yrs) : </b>
+          <span style="opacity: 0.8;"> Adults(10+yrs) : </span>
           <div class="d-flex">
             <span class="adult p-3 card shadow-2 fw-bold" style="cursor: pointer;" [class.selected]="adultCounts === num"
               *ngFor="let num of adultCount()" (click)="getAdultCount(num)"> {{num}}</span>

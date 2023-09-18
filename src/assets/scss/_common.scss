@@ -2,3 +2,62 @@
     font-size: 16px;
     font-weight: 400;
 }
+.header-city-btn {
+    width: 100%;
+    border: none;
+    background: rgba(94, 24, 12, 1);
+    border-radius: 30px;
+    color: rgba(255, 255, 255, 1);
+    padding: 13px 0px;
+}
+.atc-btn-content {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+
+}
+.atc-btns-content {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(189, 189, 189, 1);
+    line-height: 27px;
+
+}
+.bi-geo-alt{
+ font-size: 18px;
+color: rgba(214, 185, 0, 1);
+
+}
+.pad-left{
+    margin-left: 20px;
+
+}
+.pad-rgt{
+   margin-right: 17px;
+    margin-left: 20px;
+    width: 20%;
+    position: relative;
+ 
+}
+.pad-rgt::after{
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 8%;
+    right: 0px;
+    width: 1px;
+    height: 63.77px;
+   background: rgba(189, 189, 189, 1)
+ 
+}
+.cal-contet .p-button {
+    color: rgba(214, 185, 0, 1);
+    background: #fff;
+    border: none;
+    padding-right: 19px;
+}
+.cal-contet .p-button:hover{
+    color: rgba(214, 185, 0, 1);
+    background: #fff;
+
+}

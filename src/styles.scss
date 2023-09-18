@@ -52,38 +52,41 @@
 .flight-info-wrapper .p-tabview .p-tabview-panels {
     border-top-right-radius: 15px;
 
+
     }
 .flight-info-wrapper  .ltc-title{
 
 }
-.p-radiobutton {
+.gradientbg .p-radiobutton {
     width: 16px;
     height: 17px;
 }
-.p-radiobutton .p-radiobutton-box {
-    // border: 2px solid white;
-    // background: #ffffff;
+.gradientbg .p-radiobutton .p-radiobutton-box {
+   
     width: 16px;
     height: 17px;
     background: #fff
 
 }
-.p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+.gradientbg .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
     border-color: #5E180C;
     background: white;
 }
-.p-radiobutton .p-radiobutton-box .p-radiobutton-icon {
+.gradientbg .p-radiobutton .p-radiobutton-box .p-radiobutton-icon {
     width: 10px;
     height: 10.63px;
     background: #22252A;
 
 }
-.p-radiobutton .p-radiobutton-box.p-highlight {
+.gradientbg .p-radiobutton .p-radiobutton-box.p-highlight {
     background: white;
 
 }
-.p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
+.gradientbg .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
     background: white;
     color: #ffffff;
+    border-color: #22252A;
+}
+.p-radiobutton .p-radiobutton-box.p-highlight {
     border-color: #22252A;
 }
