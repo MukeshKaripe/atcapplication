@@ -32,7 +32,8 @@
   
   
   .hovers:hover {
-    background: rgba(214, 185, 0, 0.51);
+    background: rgba(214, 185, 0, 1);
+
     cursor: pointer;
   }
   
@@ -42,7 +43,8 @@
   }
   .selected{
     color: black;
-    background-color: orange;
+    background: rgba(214, 185, 0, 1);
+
   }
   .nn{
     display: flex;

@@ -56,7 +56,7 @@ export class HomeMComponent  implements OnInit {
     { name: 'NewZeland', code: 'NZ' },
   ];
   seatingClass = [
-    { class: 'Economy' },
+    { class: 'Economy/Premium Economy' },
     { class: 'Premium Economy' },
     { class: 'Business' },
   ];
@@ -167,6 +167,9 @@ export class HomeMComponent  implements OnInit {
   childrenCount(): number[] {
     return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   }
+  childrenCounta(): number[] {
+    return [0, 1, 2, 3, 4, 5, 6];
+  }
 
   getChildrenCount(num: number) {
     this.childrenCounts = num;
@@ -176,7 +179,7 @@ export class HomeMComponent  implements OnInit {
       Number(this.infantCounts);
   }
   infantCount(): number[] {
-    return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    return [0, 1, 2, 3, 4, 5, 6];
   }
 
   getInfantCount(num: number) {

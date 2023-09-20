@@ -200,58 +200,75 @@
       <!-- <button class="btn btn-warning" routerLink="parent">To Parent</button> -->
     </div>
   
-    <p-dialog [(visible)]="travellersCheck" header="Select Travellers" [style]="{'width':'50vw'}">
-      <div class="card align-items-center gap-3 shadow-3">
+    <p-dialog [(visible)]="travellersCheck" header="" [style]="{'width':'65%'}">
+      <div class="card border-0  gap-3 shadow-3" style="width: 100%;">
         <div>
-          <span style="opacity: 0.8;"> Adults(10+yrs) : </span>
-          <div class="d-flex">
-            <span class="adult p-3 card shadow-2 fw-bold" style="cursor: pointer;" [class.selected]="adultCounts === num"
+          <span class="dia-title-nam"> ADULTS(12y+) </span>
+          <p class="atc-on-trv" >on the day of travel</p>
+          <div class="d-flex " style="gap: 15px;" >
+            <div class="crd-shawdrop d-flex " >
+              <span class=" selcted-num adult  card border-0 shadow-none  fw-bold" style="cursor: pointer;" [class.selected]="adultCounts === num"
               *ngFor="let num of adultCount()" (click)="getAdultCount(num)"> {{num}}</span>
+            </div>
+          <span class="selcted-num adult  card  crd-shawdrop  fw-bold" >>9</span>
+
+          </div>
+
+        </div>
+  
+        <div class="child-infran-block d-flex " style="gap: 15px;">
+          <div >
+            <span class="dia-title-nam"> CHILDREN (2y-12y) </span>
+            <p class="atc-on-trv">on the day of travel</p>
+    
+            <div class="d-flex " style="gap: 10px;">
+            <div class="crd-shawdrop d-flex " >
+
+              <span *ngFor="let num of childrenCounta()" class="selcted-num  p-3 fw-bold" [class.selected]="childrenCounts === num"
+                style="cursor: pointer;" (click)="getChildrenCount(num)"> {{num}}</span>
+           </div>
+          <span class="selcted-num   card  crd-shawdrop  fw-bold" >>6</span>
+
+              </div>
+          </div>
+    
+          <div>
+            <span class="dia-title-nam"> INFANTS (below 2y)</span>
+            <p class="atc-on-trv">on the day of travel</p>
+            <div class="d-flex  " style="gap: 10px;">
+            <div class="crd-shawdrop d-flex " >
+
+              <span class="selcted-num   p-3 fw-bold" [class.selected]="infantCounts === num" *ngFor="let num of infantCount()"
+                style="cursor: pointer;" (click)="getInfantCount(num)"> {{num}}</span>
+           </div>
+          <span class="selcted-num adult  card  crd-shawdrop  fw-bold" >>6</span>
+
+              </div>
+    
+            <ng-container *ngIf="infantCounts > adultCounts">
+              <small class="text-danger"> Number of Infants cannot be more than Adults.. </small>
+            </ng-container>
+    
           </div>
         </div>
   
         <div>
-          <b style="opacity: 0.8;"> Children(3-9yrs) : </b>
-  
+          <span class="dia-title-nam"> CHOOSE TRAVEL CLASS</span>
           <div class="d-flex">
-            <span *ngFor="let num of childrenCount()" class="adult p-3 fw-bold" [class.selected]="childrenCounts === num"
-              style="cursor: pointer;" (click)="getChildrenCount(num)"> {{num}}</span>
-          </div>
-        </div>
-  
-        <div>
-          <b style="opacity: 0.8;"> Infants(below 3yrs) :</b>
-  
-          <div class="d-flex">
-            <span class="adult p-3 fw-bold" [class.selected]="infantCounts === num" *ngFor="let num of infantCount()"
-              style="cursor: pointer;" (click)="getInfantCount(num)"> {{num}}</span>
-          </div>
-  
-          <ng-container *ngIf="infantCounts > adultCounts">
-            <small class="text-danger"> Number of Infants cannot be more than Adults.. </small>
-          </ng-container>
-  
-        </div>
-  
-        <div>
-          <b style="opacity: 0.8;"> Choose Travelling Class :</b>
-          <div class="d-flex">
-            <span class="adult p-2 fw-bold" [class.selected]="travellClass === class.class"
+            <span class="atc-pr-nam hovers" [class.selected]="travellClass === class.class"
               *ngFor="let class of seatingClass" style="cursor: pointer;" (click)="getSeatClass(class.class)">
               {{class.class}}</span>
           </div>
   
         </div>
   
-        <div class="mt-1">
-          <b>Note : </b> <small> Total Travellers should not more than 10 </small>
-        </div>
+        
         <ng-container *ngIf="totalTravellers>10">
           <small class="text-danger"> Number of Travellers are exceded </small>
         </ng-container>
   
-        <div class="mb-2">
-          <button class="btn btn-outline-primary rounded-pill"
+        <div class="mb-2 d-flex justify-content-end ">
+          <button class="apply-btun"
             [disabled]="!(totalTravellers <=10) || !( adultCounts >= infantCounts)"
             (click)="travellerFun()">Apply</button>
         </div>

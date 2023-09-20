@@ -61,3 +61,50 @@ color: rgba(214, 185, 0, 1);
     background: #fff;
 
 }
+.dia-title-nam{
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(35, 32, 32, 1);
+    font-weight: 500;
+    // text-transform: capitalize;
+
+}
+.atc-on-trv{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(112, 112, 112, 1);
+}
+.crd-shawdrop{
+    box-shadow: 2.909090995788574px 2.909090995788574px 7.2727274894714355px 0px rgba(0, 0, 0, 0.1);
+border-radius: 7px;
+overflow: hidden;
+}
+.selcted-num{
+    width: 50px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+.atc-pr-nam{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: rgba(35, 32, 32, 1);
+    border-radius: 7px;
+    padding: 10px 20px;
+
+}
+.apply-btun{
+    border-radius: 30px;
+    background: rgba(128, 0, 32, 1);
+    color: rgba(255, 255, 255, 1);
+border: none;
+padding: 12px 36px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+}
